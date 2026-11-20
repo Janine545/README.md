@@ -1,0 +1,26 @@
+body{
+font-family: Arial, sana-serif;
+background-color:#f4f6f9;
+color:#333333;
+margin: 0;
+padding: 20px;
+}
+
+h1{
+color:#1f3a5f;
+color: #1f3a5f;
+font-size:36px;
+text-align: center;
+}
+h2{color:#2c5278;
+  }
+p{
+font-size:16px;
+line-height: 1.6;
+}
+section{
+  background-color:white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-raduis: 8px;
+}
