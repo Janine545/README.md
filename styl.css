@@ -129,4 +129,8 @@ footer p{
   color:#1f3a5f;
 }
 
+body{
+  max-widt:1100px;
+  margin:0 auto;
+}
 
