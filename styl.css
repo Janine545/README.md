@@ -146,3 +146,8 @@ p{
 .center-text{
   text-align:center;
 }
+
+.portfolio-button{
+  display:table;
+  margin:20px auto;
+}
