@@ -57,5 +57,37 @@ nav a{
 }
 nav a:hover{
     background-color:#2c5278;
-  }
+}
+.hero{
+      background-color: white;
+      padding: 50px 30px;
+      text-align:center;
+      border-radius:15px;
+      margin-bottom:40px;
+      box-shadow: 0 4px rgba(0,0,0,0,0.08);
+}
+
+.hero h1{
+    font-size: 42px;
+    max-width: 750px;
+    margin: 15px auto;
+}
+
+.hero h2{
+  font-size: 22px;
+}
+
+.hero p {
+  max-width:650px;
+  margin: 15px auto;
+}
+
+.hero .welcome{
+  color: #2c5278;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+  
+  
   
