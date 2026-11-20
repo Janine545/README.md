@@ -1,5 +1,5 @@
 body{
-font-family: Arial, sana-serif;
+font-family: Arial, sans-serif;
 background-color:#f4f6f9;
 color:#333333;
 margin: 0;
@@ -22,7 +22,7 @@ section{
   background-color:white;
   padding: 20px;
   margin-bottom: 20px;
-  border-raduis: 8px;
+  border-radius: 8px;
 }
 a{
   display: inline-block;
@@ -39,9 +39,9 @@ a:hover{
 }
 nav{
   display: flex;
-  justify-contact: center;
+  justify-content: center;
   gap: 20px;
-  flex-wrap: wrap:
+  flex-wrap: wrap;
   background-color: #1f3a5f;
   padding: 15px;
   border-radius: 10px;
@@ -50,7 +50,7 @@ nav{
   margin-bottom: 30px;
 }
 nav a{
-  color-white;
+  color:white;
   background-color:transparent;
   padding: 8px 12px;
   margin-top: 0;
