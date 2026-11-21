@@ -1,3 +1,4 @@
+
 /* GENERAL SETTINGS */
 * {
     margin: 0;
@@ -85,7 +86,7 @@ nav a {
 }
 
 
-/* HOMEPAGE */
+/* HERO SECTION */
 .hero {
     background: #dce8f1;
     padding: 35px 9%;
@@ -133,7 +134,7 @@ nav a {
 }
 
 
-/* HOMEPAGE ILLUSTRATION */
+/* HERO ILLUSTRATION */
 .hero-img {
     width: 330px;
     flex-shrink: 0;
@@ -146,7 +147,29 @@ nav a {
 }
 
 
-/* TAGS */
+/* TOP-RIGHT ICONS */
+.hero-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.hero-icons span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
+    height: 38px;
+    padding: 3px;
+    background: #ffffff;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+
+/* HERO TAGS */
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -166,30 +189,25 @@ nav a {
 
 /* MAIN CONTENT */
 .main-content {
-    padding: 20px 9%;
+    padding: 25px 9%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    grid-template-areas:
+        "about services"
+        "experience experience";
+    gap: 22px 25px;
     align-items: stretch;
-}
-
-
-/* LEFT COLUMN */
-.left-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
-    min-width: 0;
 }
 
 
 /* ABOUT SECTION */
 .about {
+    grid-area: about;
     display: flex;
     align-items: center;
     gap: 25px;
     padding: 12px 0;
+    min-width: 0;
 }
 
 .profile-photo {
@@ -235,14 +253,14 @@ nav a {
 }
 
 
-/* SERVICES */
+/* TOP SERVICES */
 .services {
+    grid-area: services;
     background: #dce8f1;
     border-radius: 12px;
     padding: 22px;
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 .services h2 {
@@ -259,6 +277,50 @@ nav a {
     flex: 1;
 }
 
+
+/* EXPERIENCE FULL-WIDTH BACKGROUND */
+.experience-band {
+    grid-area: experience;
+    background: #cbdced;
+    border-radius: 12px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: stretch;
+}
+
+
+/* EXPERIENCE TEXT */
+.experience-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.experience-text h2 {
+    color: #10285e;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.experience-text p {
+    color: #222222;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* BOTTOM SERVICE CARDS */
+.experience-services {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    align-items: stretch;
+}
+
+
+/* SERVICE CARDS */
 .card {
     background: #ffffff;
     padding: 18px;
@@ -290,28 +352,6 @@ nav a {
     font-size: 13px;
     color: #222222;
     line-height: 1.5;
-}
-
-
-/* EXPERIENCE FULL-WIDTH BACKGROUND */
-.experience {
-    background: #cbdced;
-    padding: 25px 9%;
-    border-radius:0;
-    width:100%;
-    margin-top:-20px;
-}
-
-.experience h2 {
-    color: #10285e;
-    font-size: 25px;
-    margin-bottom: 7px;
-}
-
-.experience p {
-    color: #222222;
-    font-size: 14px;
-    max-width:900px;
 }
 
 
@@ -382,7 +422,11 @@ footer {
     }
 
     .hero-img {
-        width: 230px;
+        width: 260px;
+    }
+
+    .hero-icons {
+        justify-content: center;
     }
 
     .hero-buttons,
@@ -392,12 +436,15 @@ footer {
 
     .main-content {
         grid-template-columns: 1fr;
+        grid-template-areas:
+            "about"
+            "services"
+            "experience";
     }
 
-    .services {
-        height: auto;
+    .experience-band {
+        grid-template-columns: 1fr;
     }
-
 }
 
 
@@ -422,7 +469,8 @@ footer {
         justify-content: center;
     }
 
-    .service-grid {
+    .service-grid,
+    .experience-services {
         grid-template-columns: 1fr;
     }
 
