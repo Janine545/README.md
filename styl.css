@@ -1,4 +1,3 @@
-
 /* GENERAL SETTINGS */
 * {
     margin: 0;
@@ -147,6 +146,27 @@ nav a {
 }
 
 
+/* FIVE HERO ICONS */
+.hero-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.hero-icons span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: #173A78;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 17px;
+}
+
+
 /* HERO TAGS */
 .tags {
     display: flex;
@@ -165,11 +185,11 @@ nav a {
 }
 
 
-/* MAIN CONTENT GRID */
+/* MAIN CONTENT */
 .main-content {
     padding: 25px 9%;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "about services"
         "experience experience";
@@ -197,10 +217,6 @@ nav a {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
 }
 
-.about-text {
-    min-width: 0;
-}
-
 .about-text h2 {
     font-size: 29px;
     color: #10285e;
@@ -219,28 +235,23 @@ nav a {
 }
 
 
-/* SKILLS: EVEN TWO-COLUMN GRID */
+/* SKILLS */
 .skills {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
 }
 
 .skills span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 34px;
     background: #dce8f1;
     color: #10285e;
     border-radius: 6px;
-    padding: 6px 8px;
+    padding: 5px 8px;
     font-size: 11px;
 }
 
 
-/* SERVICES SECTION */
+/* TOP SERVICES */
 .services {
     grid-area: services;
     background: #dce8f1;
@@ -248,7 +259,6 @@ nav a {
     padding: 22px;
     display: flex;
     flex-direction: column;
-    min-width: 0;
 }
 
 .services h2 {
@@ -263,21 +273,19 @@ nav a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
     flex: 1;
-    align-items: stretch;
 }
 
 
-/* EXPERIENCE BAND */
+/* EXPERIENCE FULL-WIDTH BAND */
 .experience-band {
     grid-area: experience;
     background: #cbdced;
     border-radius: 12px;
     padding: 24px;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 25px;
     align-items: stretch;
-    min-width: 0;
 }
 
 
@@ -286,7 +294,6 @@ nav a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 0;
 }
 
 .experience-text h2 {
@@ -308,17 +315,15 @@ nav a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
     align-items: stretch;
-    min-width: 0;
 }
 
 
-/* ALL SERVICE CARDS */
+/* SERVICE CARDS */
 .card {
     background: #ffffff;
     padding: 18px;
     border-radius: 11px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
-    min-width: 0;
 }
 
 .service-icon {
@@ -395,7 +400,7 @@ footer {
 }
 
 
-/* TABLET RESPONSIVENESS */
+/* TABLET */
 @media (max-width: 900px) {
 
     header {
@@ -418,6 +423,10 @@ footer {
         width: 260px;
     }
 
+    .hero-icons {
+        justify-content: center;
+    }
+
     .hero-buttons,
     .tags {
         justify-content: center;
@@ -437,7 +446,7 @@ footer {
 }
 
 
-/* MOBILE RESPONSIVENESS */
+/* MOBILE */
 @media (max-width: 600px) {
 
     .hero h2 {
@@ -455,7 +464,7 @@ footer {
     }
 
     .skills {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-content: center;
     }
 
     .service-grid,
@@ -470,4 +479,5 @@ footer {
     .contact-box {
         width: 100%;
     }
+
 }
