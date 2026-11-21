@@ -242,7 +242,7 @@ nav a {
     min-width: 0;
 }
 
-.services-area > h2 {
+.services-heading {
     text-align: center;
     color: #10285e;
     font-size: 26px;
@@ -250,8 +250,8 @@ nav a {
 }
 
 
-/* TOP TWO WHITE SERVICE CARDS */
-.top-services {
+/* TOP TWO SERVICE CARDS */
+.service-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px;
@@ -259,40 +259,49 @@ nav a {
 }
 
 
-/* BOTTOM ROW */
-.bottom-services {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 14px;
-    align-items: stretch;
-}
-
-
-/* BLUE EXPERIENCE COLUMN */
-.experience-column {
+/* BLUE EXPERIENCE BAND */
+.experience-band {
     background: #cbdced;
     border-radius: 11px;
     padding: 18px;
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.5fr);
+    gap: 16px;
+    align-items: stretch;
+    width: 100%;
+}
+
+.experience-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-width: 0;
 }
 
-.experience-column h2 {
+.experience-text h2 {
     color: #10285e;
     font-size: 23px;
     margin-bottom: 10px;
 }
 
-.experience-column p {
+.experience-text p {
     color: #222222;
     font-size: 13px;
     line-height: 1.7;
 }
 
 
-/* FOUR WHITE SERVICE CARDS */
+/* TWO BOTTOM WHITE CARDS */
+.experience-services {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    align-items: stretch;
+    min-width: 0;
+}
+
+
+/* WHITE SERVICE CARDS */
 .card {
     background: #ffffff;
     padding: 17px;
@@ -439,12 +448,12 @@ footer {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .bottom-services {
-        grid-template-columns: 1fr 1fr;
+    .experience-band {
+        grid-template-columns: 1fr;
     }
 
-    .experience-column {
-        grid-column: 1 / -1;
+    .experience-services {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
@@ -468,13 +477,9 @@ footer {
         padding: 25px 5%;
     }
 
-    .top-services,
-    .bottom-services {
+    .service-grid,
+    .experience-services {
         grid-template-columns: 1fr;
-    }
-
-    .experience-column {
-        grid-column: auto;
     }
 
     .contact-boxes {
