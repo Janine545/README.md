@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
 
 <body>
 
+<!-- HEADER -->
 <header>
     <div class="logo">
         <h1>Janine Erens</h1>
@@ -20,10 +22,8 @@
         <a href="#services">Services</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
-        <a class="btn btn-dark"
-           href="mailto:ninaerens4@gmail.com?subject=Free%20Consultation">
-            Book a Free Call
-        </a>
+        <a href="mailto:ninaerens4@gmail.com?subject=Free%20Consultation"
+           class="btn btn-dark">Book a Free Call</a>
     </nav>
 </header>
 
@@ -45,29 +45,34 @@
         </p>
 
         <div class="hero-buttons">
-            <a class="btn btn-dark"
-               href="mailto:ninaerens4@gmail.com?subject=Free%20Consultation">
-                Book a Free Call
-            </a>
+            <a href="mailto:ninaerens4@gmail.com?subject=Free%20Consultation"
+               class="btn btn-dark">Book a Free Call</a>
 
-            <a class="btn btn-outline"
-               href="https://canva.link/4pse7izh8pp8sxl"
+            <a href="https://canva.link/4pse7izh8pp8sxl"
                target="_blank"
-               rel="noopener noreferrer">
-                View My Portfolio
-            </a>
+               rel="noopener noreferrer"
+               class="btn btn-outline">View My Portfolio</a>
         </div>
 
         <div class="tags">
-            <span>Virtual Assistant</span>
-            <span>Organised &amp; Reliable</span>
-            <span>Remote Support</span>
+            <span>♙ Virtual Assistant</span>
+            <span>✓ Organised & Reliable</span>
+            <span>⌖ Remote Support</span>
         </div>
     </div>
 
 
-    <!-- ORIGINAL DOCUMENT, CALENDAR AND CHECKMARK -->
+    <!-- HERO ILLUSTRATION -->
     <div class="hero-img">
+
+        <!-- FIVE ICONS -->
+        <div class="hero-icons">
+            <span title="Email Management">✉</span>
+            <span title="Scheduling">▦</span>
+            <span title="Task Management">✓</span>
+            <span title="Documents">▤</span>
+            <span title="Administrative Support">⌂</span>
+        </div>
 
         <svg viewBox="0 0 340 270"
              xmlns="http://www.w3.org/2000/svg"
@@ -85,9 +90,7 @@
                   fill="#809BCB"/>
 
             <!-- DOCUMENT LINES -->
-            <g stroke="#5475AE"
-               stroke-width="9"
-               stroke-linecap="round">
+            <g stroke="#5475AE" stroke-width="9" stroke-linecap="round">
                 <path d="M82 112 H165"/>
                 <path d="M82 137 H165"/>
                 <path d="M82 162 H145"/>
@@ -98,7 +101,7 @@
 
             <path d="M99 195 L104 200 L113 189"
                   fill="none"
-                  stroke="#FFFFFF"
+                  stroke="white"
                   stroke-width="3"
                   stroke-linecap="round"/>
 
@@ -110,9 +113,7 @@
                   rx="5" fill="#DCE8F4"/>
 
             <!-- CALENDAR RINGS -->
-            <g stroke="#173A78"
-               stroke-width="9"
-               stroke-linecap="round">
+            <g stroke="#173A78" stroke-width="9" stroke-linecap="round">
                 <path d="M230 20 V43"/>
                 <path d="M285 20 V43"/>
             </g>
@@ -129,7 +130,7 @@
                 <rect x="248" y="111" width="14" height="13" rx="3"/>
             </g>
 
-            <!-- CHECKMARK -->
+            <!-- CHECKMARK SHIELD -->
             <path d="M260 155 L310 172 V205
                      Q310 238 260 258
                      Q210 238 210 205 V172 Z"
@@ -159,7 +160,6 @@
              class="profile-photo">
 
         <div class="about-text">
-
             <h2>About Me</h2>
 
             <p>
@@ -184,18 +184,17 @@
                 <span>Organization</span>
                 <span>Data Capturing</span>
             </div>
-
         </div>
+
     </section>
 
 
-    <!-- SERVICES -->
-    <section class="services-area" id="services">
+    <!-- TOP TWO SERVICES -->
+    <section class="services" id="services">
 
         <h2>My Services</h2>
 
-        <!-- TOP TWO WHITE CARDS -->
-        <div class="top-services">
+        <div class="service-grid">
 
             <div class="card">
                 <div class="service-icon">✉</div>
@@ -218,27 +217,30 @@
 
         </div>
 
+    </section>
 
-        <!-- BOTTOM ROW -->
-        <div class="bottom-services">
 
-            <!-- BLUE EXPERIENCE COLUMN -->
-            <div class="experience-column" id="experience">
+    <!-- FULL-WIDTH EXPERIENCE BAND -->
+    <section class="experience-band" id="experience">
 
-                <h2>Experience</h2>
+        <!-- EXPERIENCE TEXT: LEFT -->
+        <div class="experience-text">
+            <h2>Experience</h2>
 
-                <p>
-                    In my past role, I kept the back office running
-                    smoothly. I captured invoices and processed claims,
-                    and turned stacks of paperwork into clean, precise
-                    digital records. Every document scanned, filed and
-                    tracked with care, so nothing got lost and everything
-                    was easy to find.
-                </p>
+            <p>
+                In my past role, I kept the back office running
+                smoothly. I captured invoices and processed claims,
+                and turned stacks of paperwork into clean, precise
+                digital records. Every document scanned, filed and
+                tracked with care, so nothing got lost and everything
+                was easy to find.
+            </p>
+        </div>
 
-            </div>
 
-            <!-- WHITE SERVICE CARD -->
+        <!-- BOTTOM TWO SERVICES: RIGHT -->
+        <div class="experience-services">
+
             <div class="card">
                 <div class="service-icon">▣</div>
                 <h4>Document Management</h4>
@@ -248,7 +250,6 @@
                 </p>
             </div>
 
-            <!-- WHITE SERVICE CARD -->
             <div class="card">
                 <div class="service-icon">✓</div>
                 <h4>Administrative Support</h4>
@@ -279,18 +280,16 @@
     <div class="contact-boxes">
 
         <a href="mailto:ninaerens4@gmail.com" class="contact-box">
-            <strong>Email</strong>
+            <strong>✉ Email</strong>
             <br>
             ninaerens4@gmail.com
         </a>
 
         <a href="mailto:ninaerens4@gmail.com?subject=Free%20Consultation"
-           class="btn btn-dark">
-            Book a Free Call
-        </a>
+           class="btn btn-dark">Book a Free Call</a>
 
         <div class="contact-box">
-            <strong>Location</strong>
+            <strong>⌖ Location</strong>
             <br>
             Cape Town, South Africa
         </div>
@@ -300,6 +299,7 @@
 </section>
 
 
+<!-- FOOTER -->
 <footer>
     © 2026 Janine Erens • Virtual Assistant • All rights reserved.
 </footer>
