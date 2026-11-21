@@ -16,7 +16,6 @@ body {
     line-height: 1.5;
 }
 
-
 /* HEADER */
 header {
     background: #ffffff;
@@ -52,7 +51,6 @@ nav a {
     font-weight: bold;
 }
 
-
 /* BUTTONS */
 .btn {
     display: inline-block;
@@ -83,7 +81,6 @@ nav a {
     background: #10285e;
     color: #ffffff;
 }
-
 
 /* HERO SECTION */
 .hero {
@@ -132,7 +129,6 @@ nav a {
     margin-top: 12px;
 }
 
-
 /* HERO ILLUSTRATION */
 .hero-img {
     width: 330px;
@@ -145,8 +141,7 @@ nav a {
     display: block;
 }
 
-
-/* FIVE HERO ICONS */
+/* HERO ICONS */
 .hero-icons {
     display: flex;
     justify-content: flex-end;
@@ -166,7 +161,6 @@ nav a {
     font-size: 17px;
 }
 
-
 /* HERO TAGS */
 .tags {
     display: flex;
@@ -184,26 +178,30 @@ nav a {
     font-weight: bold;
 }
 
-
-/* MAIN CONTENT */
+/* MAIN CONTENT LAYOUT */
 .main-content {
-    padding: 25px 9%;
+    position: relative;
+    isolation: isolate;
+    padding: 25px 9% 55px;
+
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.95fr 1.25fr;
+
     grid-template-areas:
         "about services"
-        "experience experience";
-    gap: 22px 25px;
-    align-items: stretch;
-}
+        "experience services";
 
+    column-gap: 30px;
+    row-gap: 0;
+    align-items: start;
+}
 
 /* ABOUT SECTION */
 .about {
     grid-area: about;
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 22px;
     padding: 12px 0;
     min-width: 0;
 }
@@ -215,6 +213,10 @@ nav a {
     border-radius: 13px;
     flex-shrink: 0;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.about-text {
+    min-width: 0;
 }
 
 .about-text h2 {
@@ -234,8 +236,7 @@ nav a {
     margin-bottom: 10px;
 }
 
-
-/* SKILLS */
+/* KEY SKILLS */
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -250,98 +251,70 @@ nav a {
     font-size: 11px;
 }
 
-
-/* TOP SERVICES */
+/* MY SERVICES - ONE LARGE BLOCK */
 .services {
     grid-area: services;
+
+    position: relative;
+    z-index: 3;
+
     background: #dce8f1;
     border-radius: 12px;
-    padding: 22px;
-    display: flex;
-    flex-direction: column;
+    padding: 30px;
+
+    width: 100%;
+
+    /* Move the complete services block down */
+    margin-top: 55px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
 }
 
 .services h2 {
     text-align: center;
     color: #10285e;
-    font-size: 26px;
-    margin-bottom: 18px;
+    font-size: 29px;
+    margin-bottom: 24px;
 }
 
+/* FOUR SERVICE CARDS */
 .service-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-    flex: 1;
+    gap: 20px;
 }
-
-
-/* EXPERIENCE FULL-WIDTH BAND */
-.experience-band {
-    grid-area: experience;
-    background: #cbdced;
-    border-radius: 12px;
-    padding: 24px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    align-items: stretch;
-}
-
-
-/* EXPERIENCE TEXT */
-.experience-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.experience-text h2 {
-    color: #10285e;
-    font-size: 25px;
-    margin-bottom: 10px;
-}
-
-.experience-text p {
-    color: #222222;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-
-/* TWO BOTTOM SERVICE CARDS */
-.experience-services {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-    align-items: stretch;
-}
-
 
 /* SERVICE CARDS */
 .card {
     background: #ffffff;
-    padding: 18px;
+    padding: 22px;
+    min-height: 150px;
     border-radius: 11px;
+
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+
+    position: relative;
 }
 
 .service-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 38px;
-    height: 38px;
+
+    width: 42px;
+    height: 42px;
+
     background: #173b7b;
     color: #ffffff;
+
     border-radius: 50%;
     font-size: 21px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .card h4 {
     display: block;
-    font-size: 15px;
+    font-size: 16px;
     color: #10285e;
     margin-bottom: 8px;
 }
@@ -349,9 +322,47 @@ nav a {
 .card p {
     font-size: 13px;
     color: #222222;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
+/* EXPERIENCE BACKGROUND STRIP */
+.experience-band {
+    grid-area: experience;
+
+    position: relative;
+    z-index: 1;
+
+    /* Extend the background behind the services block */
+    background: #cbdced;
+
+    border-radius: 12px;
+
+    padding: 28px 25px;
+
+    min-height: 245px;
+
+    width: 100%;
+}
+
+/* EXPERIENCE TEXT */
+.experience-text {
+    position: relative;
+    z-index: 2;
+
+    max-width: 100%;
+}
+
+.experience-text h2 {
+    color: #10285e;
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.experience-text p {
+    color: #222222;
+    font-size: 14px;
+    line-height: 1.7;
+}
 
 /* CONTACT */
 .contact {
@@ -389,7 +400,6 @@ nav a {
     font-size: 14px;
 }
 
-
 /* FOOTER */
 footer {
     background: #102e70;
@@ -399,9 +409,8 @@ footer {
     font-size: 13px;
 }
 
-
 /* TABLET */
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
 
     header {
         flex-direction: column;
@@ -414,9 +423,36 @@ footer {
         gap: 15px;
     }
 
+    .main-content {
+        grid-template-columns: 1fr 1.1fr;
+        column-gap: 20px;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .services {
+        padding: 20px;
+        margin-top: 45px;
+    }
+
+    .service-grid {
+        gap: 12px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+
     .hero {
         flex-direction: column;
         text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 32px;
     }
 
     .hero-img {
@@ -433,28 +469,15 @@ footer {
     }
 
     .main-content {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "about"
-            "services"
-            "experience";
-    }
-
-    .experience-band {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-/* MOBILE */
-@media (max-width: 600px) {
-
-    .hero h2 {
-        font-size: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px 6% 35px;
     }
 
     .about {
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
@@ -467,9 +490,26 @@ footer {
         justify-content: center;
     }
 
-    .service-grid,
-    .experience-services {
-        grid-template-columns: 1fr;
+    .services {
+        width: 100%;
+        margin-top: 0;
+        padding: 20px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .card {
+        padding: 14px;
+        min-height: 140px;
+    }
+
+    .experience-band {
+        width: 100%;
+        min-height: auto;
+        padding: 25px;
     }
 
     .contact-boxes {
@@ -479,5 +519,20 @@ footer {
     .contact-box {
         width: 100%;
     }
+}
 
+/* SMALL MOBILE SCREENS */
+@media (max-width: 400px) {
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    .services {
+        padding: 15px;
+    }
 }
