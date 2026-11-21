@@ -1,26 +1,191 @@
-/* MAIN CONTENT LAYOUT */
-.main-content {
-    padding: 15px 9%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #101f45;
+    line-height: 1.5;
+}
+
+
+/* HEADER */
+header {
+    background: #ffffff;
+    padding: 18px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 25px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+}
+
+.logo h1 {
+    font-size: 30px;
+    color: #10285e;
+    line-height: 1.2;
+}
+
+.logo span {
+    font-size: 16px;
+    color: #10285e;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #101f45;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 11px 25px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.btn-dark {
+    background: #102e70;
+    color: #ffffff;
+}
+
+.btn-dark:hover {
+    background: #244c91;
+}
+
+.btn-outline {
+    background: #ffffff;
+    color: #10285e;
+    border: 2px solid #10285e;
+}
+
+.btn-outline:hover {
+    background: #10285e;
+    color: #ffffff;
+}
+
+
+/* HERO SECTION */
+.hero {
+    background: #dce8f1;
+    padding: 35px 9%;
+    min-height: 330px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text {
+    max-width: 720px;
+}
+
+.hero small {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #10285e;
+}
+
+.hero h2 {
+    font-size: 42px;
+    line-height: 1.12;
+    margin: 12px 0;
+    color: #10285e;
+}
+
+.hero h3 {
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.hero p {
+    max-width: 680px;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+
+/* HERO ILLUSTRATION */
+.hero-img {
+    width: 330px;
+    flex-shrink: 0;
+}
+
+.hero-img svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* HERO TAGS */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tags span {
+    background: #c6d9ed;
+    color: #10285e;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* MAIN CONTENT GRID */
+.main-content {
+    padding: 25px 9%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+        "about services"
+        "experience experience";
+    gap: 22px 25px;
     align-items: stretch;
 }
 
-/* LEFT COLUMN */
-.left-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
-}
 
 /* ABOUT SECTION */
 .about {
+    grid-area: about;
     display: flex;
     align-items: center;
     gap: 25px;
     padding: 12px 0;
+    min-width: 0;
 }
 
 .profile-photo {
@@ -29,6 +194,11 @@
     object-fit: cover;
     border-radius: 13px;
     flex-shrink: 0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.about-text {
+    min-width: 0;
 }
 
 .about-text h2 {
@@ -40,7 +210,7 @@
 .about-text p {
     color: #222222;
     font-size: 14px;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
 }
 
 .about-text h3 {
@@ -48,42 +218,256 @@
     margin-bottom: 10px;
 }
 
-/* SERVICES */
+
+/* SKILLS: EVEN TWO-COLUMN GRID */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+}
+
+.skills span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 34px;
+    background: #dce8f1;
+    color: #10285e;
+    border-radius: 6px;
+    padding: 6px 8px;
+    font-size: 11px;
+}
+
+
+/* SERVICES SECTION */
 .services {
+    grid-area: services;
     background: #dce8f1;
     border-radius: 12px;
-    padding: 18px;
+    padding: 22px;
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 .services h2 {
     text-align: center;
     color: #10285e;
     font-size: 26px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    flex: 1;
+    align-items: stretch;
 }
 
-/* EXPERIENCE */
-.experience {
+
+/* EXPERIENCE BAND */
+.experience-band {
+    grid-area: experience;
     background: #cbdced;
-    padding: 15px 0;
+    border-radius: 12px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 25px;
+    align-items: stretch;
+    min-width: 0;
 }
 
-.experience h2 {
+
+/* EXPERIENCE TEXT */
+.experience-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+}
+
+.experience-text h2 {
     color: #10285e;
     font-size: 25px;
-    margin-bottom: 3px;
+    margin-bottom: 10px;
 }
 
-.experience p {
-    max-width: 850px;
+.experience-text p {
     color: #222222;
     font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* TWO BOTTOM SERVICE CARDS */
+.experience-services {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    align-items: stretch;
+    min-width: 0;
+}
+
+
+/* ALL SERVICE CARDS */
+.card {
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 11px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+    min-width: 0;
+}
+
+.service-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: #173b7b;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.card h4 {
+    display: block;
+    font-size: 15px;
+    color: #10285e;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 13px;
+    color: #222222;
+    line-height: 1.5;
+}
+
+
+/* CONTACT */
+.contact {
+    background: #ffffff;
+    text-align: center;
+    padding: 35px 9%;
+}
+
+.contact h2 {
+    font-size: 29px;
+    color: #10285e;
+    margin-bottom: 5px;
+}
+
+.contact p {
+    margin-bottom: 18px;
+    color: #222222;
+}
+
+.contact-boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.contact-box {
+    background: #dce8f1;
+    color: #10285e;
+    text-decoration: none;
+    padding: 12px 20px;
+    min-width: 220px;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+
+/* FOOTER */
+footer {
+    background: #102e70;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+}
+
+
+/* TABLET RESPONSIVENESS */
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-img {
+        width: 260px;
+    }
+
+    .hero-buttons,
+    .tags {
+        justify-content: center;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "about"
+            "services"
+            "experience";
+    }
+
+    .experience-band {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 600px) {
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 180px;
+        height: 215px;
+    }
+
+    .skills {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-grid,
+    .experience-services {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-boxes {
+        flex-direction: column;
+    }
+
+    .contact-box {
+        width: 100%;
+    }
 }
