@@ -30,14 +30,14 @@ header h1 {
 nav{
   display:flex;
   gap:25px;
-  align-item:center;
+  align-items:center;
 }
 
 nav a{
   text-decoration:none;
   color:#24364b;
   font-size:14px;
-  font-weight:600px;
+  font-weight:600;
 }
 
 /*HOMEPAGE*/
@@ -57,7 +57,7 @@ nav a{
 
 .hero h2{
   font-size:52px;
-  line-height;1.2;
+  line-height:1.2;
   color:#243646;
   margin-bottom:18px;
 }
@@ -74,13 +74,13 @@ nav a{
   color:white;
   text-decoration:none;
   padding:13px 28px;
-  font=size:13px;
+  font-size:13px;
   letter-spacing:1px;
 }
 
 /*ABOUT SECTION*/
 .about{
-  padding:80px 8%
+  padding:80px 8%;
   background:#ffffff;
 }
 
