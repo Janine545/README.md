@@ -1,120 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Janine Erens - Virtual Assistant</title>
-<link rel="stylesheet" href="styl.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janine Erens | Virtual Assistant</title>
+    <link rel="stylesheet" href="styl.css">
 </head>
+
 <body>
 
+<!-- HEADER -->
 <header>
-  <h1>Janine Erens <span>Virtual Assistant</span></h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-    <a href="#contact" class="btn btn-dark" style="padding:8px 18px;">Book a Free Call</a>
-  </nav>
+    <div class="logo">
+        <h1>Janine Erens</h1>
+        <span>Virtual Assistant</span>
+    </div>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <a href="mailto:ninaerens4@gmail.com?subject=Free%20Consultation"
+           class="btn btn-dark">Book a Free Call</a>
+    </nav>
 </header>
 
+<!-- HERO SECTION -->
 <section class="hero">
-  <div class="hero-text">
-    <small>WELCOME TO MY PORTFOLIO</small>
-    <h2>Reliable Administrative Support for your Business</h2>
-    <h3>Virtual Assistant | Administrative Support</h3>
-    <p>Helping businesses stay organised through dependable administrative assistance, document management and professional communication.</p>
 
-    <div class="hero-buttons">
-      <a href="#contact" class="btn btn-dark">Book a Free Call</a>
-      <a href="https://canva.link/4pse7izh8pp8sxl" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View My Portfolio</a>
+    <div class="hero-text">
+        <small>WELCOME TO MY PORTFOLIO</small>
+
+        <h2>Reliable Administrative Support for your Business</h2>
+
+        <h3>Virtual Assistant | Administrative Support</h3>
+
+        <p>
+            Helping businesses stay organised through dependable
+            administrative assistance, document management and
+            professional communication.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="mailto:ninaerens4@gmail.com?subject=Free%20Consultation"
+               class="btn btn-dark">Book a Free Call</a>
+
+            <a href="https://canva.link/4pse7izh8pp8sxl"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-outline">View My Portfolio</a>
+        </div>
+
+        <div class="tags">
+            <span>♙ Virtual Assistant</span>
+            <span>✓ Organised & Reliable</span>
+            <span>⌖ Remote Support</span>
+        </div>
     </div>
 
-    <div class="tags">
-      <span>Virtual Assistant</span>
-      <span>Organised & Reliable</span>
-      <span>Remote Support</span>
-    </div>
-  </div>
+    <!-- ADMINISTRATIVE ILLUSTRATION -->
+    <div class="hero-img">
+        <svg viewBox="0 0 340 270" xmlns="http://www.w3.org/2000/svg"
+             role="img" aria-label="Document, calendar and checkmark illustration">
 
-  <div class="hero-img">📄 ✅ 📅</div>
+            <rect x="65" y="35" width="145" height="205"
+                  rx="20" fill="#A9BDE0"/>
+
+            <path d="M165 35 L210 80 L165 80 Z"
+                  fill="#DCE8F4"/>
+
+            <path d="M165 35 L165 80 L210 80"
+                  fill="#809BCB"/>
+
+            <rect x="90" y="105" width="90" height="10"
+                  rx="5" fill="#5475AE"/>
+            <rect x="90" y="130" width="90" height="10"
+                  rx="5" fill="#5475AE"/>
+            <rect x="90" y="155" width="65" height="10"
+                  rx="5" fill="#5475AE"/>
+
+            <rect x="205" y="30" width="100" height="105"
+                  rx="15" fill="#173A78"/>
+
+            <rect x="215" y="55" width="80" height="70"
+                  rx="5" fill="#DCE8F4"/>
+
+            <path d="M230 22 V45 M280 22 V45"
+                  stroke="#173A78" stroke-width="10"
+                  stroke-linecap="round"/>
+
+            <g fill="#5475AE">
+                <rect x="225" y="67" width="14" height="12" rx="2"/>
+                <rect x="248" y="67" width="14" height="12" rx="2"/>
+                <rect x="271" y="67" width="14" height="12" rx="2"/>
+                <rect x="225" y="88" width="14" height="12" rx="2"/>
+                <rect x="248" y="88" width="14" height="12" rx="2"/>
+                <rect x="271" y="88" width="14" height="12" rx="2"/>
+            </g>
+
+            <circle cx="245" cy="195" r="48" fill="#173A78"/>
+
+            <path d="M222 194 L239 211 L271 176"
+                  fill="none" stroke="white"
+                  stroke-width="11" stroke-linecap="round"
+                  stroke-linejoin="round"/>
+        </svg>
+    </div>
+
 </section>
 
-<div class="container" id="about">
-  <div class="about">
-    <img src="your-photo.jpg" alt="Janine Erens">
-    <h2>About Me</h2>
+<!-- ABOUT AND SERVICES -->
+<main class="main-content">
 
-    <p><strong>Hello! My name is Janine Erens.</strong> I provide administrative support, document management and professional communication.</p>
+    <section class="about" id="about">
 
-    <p style="margin-top:10px;">I am an organised, reliable and detail-oriented professional with practical experience in office Administration.</p>
+        <img src="janine-photo.jpg" alt="Janine Erens"
+             class="profile-photo">
 
-    <h3 style="margin-top:16px;">Key Skills</h3>
+        <div class="about-text">
+            <h2>About Me</h2>
 
-    <div class="skills">
-      <span>Document Management</span>
-      <span>Scheduling</span>
-      <span>Email Management</span>
-      <span>Communication</span>
-      <span>Organization</span>
-      <span>Data Capturing</span>
-    </div>
-  </div>
+            <p>
+                Hello! My name is Janine Erens. I provide
+                administrative support, document management
+                and professional communication.
+            </p>
 
-  <div class="services" id="services">
-    <h2>My Services</h2>
+            <h3>Key Skills</h3>
 
-    <div class="service-grid">
-      <div class="card">
-        <h4>📧 Email Management</h4>
-        <p>Organising inboxes, filtering emails, and ensuring timely responses to keep communication clear.</p>
-      </div>
+            <div class="skills">
+                <span>Document Management</span>
+                <span>Scheduling</span>
+                <span>Email Management</span>
+                <span>Communication</span>
+                <span>Organization</span>
+                <span>Data Capturing</span>
+            </div>
+        </div>
 
-      <div class="card">
-        <h4>⌨️ Data Entry</h4>
-        <p>Accurate and efficient data entry for spreadsheets, databases, and business records.</p>
-      </div>
+    </section>
 
-      <div class="card">
-        <h4>📁 Document Management</h4>
-        <p>Managing, organising, and securely filing documents for easy access and record keeping.</p>
-      </div>
+    <!-- SERVICES -->
+    <section class="services" id="services">
 
-      <div class="card">
-        <h4>📋 Administrative Support</h4>
-        <p>Providing reliable admin support including scheduling, coordination, and general business administration.</p>
-      </div>
-    </div>
-  </div>
-</div>
+        <h2>My Services</h2>
 
+        <div class="service-grid">
+
+            <div class="card">
+                <div class="service-icon">✉</div>
+                <h4>Email Management</h4>
+                <p>
+                    Organising inboxes, filtering emails, and
+                    ensuring timely responses to keep
+                    communication clear.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="service-icon">▤</div>
+                <h4>Data Entry</h4>
+                <p>
+                    Accurate and efficient data entry for
+                    spreadsheets, databases, and business records.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="service-icon">▣</div>
+                <h4>Document Management</h4>
+                <p>
+                    Managing, organising, and securely filing
+                    documents for easy access and record keeping.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="service-icon">▤</div>
+                <h4>Administrative Support</h4>
+                <p>
+                    Providing reliable admin support including
+                    scheduling, coordination, and general
+                    business administration.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- EXPERIENCE -->
 <section class="experience" id="experience">
-  <h2>Experience</h2>
-  <p>Experienced in managing GRVs, processing invoices and claims, and handling document scanning with attention to detail and accuracy. I ensure smooth back-office operations so you can focus on growing your business.</p>
+
+    <h2>Experience</h2>
+
+    <p>
+        Experienced in managing GRVs, processing invoices
+        and claims, and handling document scanning with
+        attention to detail and accuracy. I ensure smooth
+        back-office operations so you can focus on growing
+        your business.
+    </p>
+
 </section>
 
+<!-- CONTACT -->
 <section class="contact" id="contact">
-  <h2>Get in Touch</h2>
-  <p>Let's work together to keep your business organised and running smoothly.</p>
 
-  <div class="contact-boxes">
-    <div class="contact-box">
-      <strong>📧 Email</strong><br>
-      ninaerens4@gmail.com
+    <h2>Get in Touch</h2>
+
+    <p>
+        Let's work together to keep your business organised
+        and running smoothly.
+    </p>
+
+    <div class="contact-boxes">
+
+        <a href="mailto:ninaerens4@gmail.com" class="contact-box">
+            <strong>✉ Email</strong>
+            <br>
+            ninaerens4@gmail.com
+        </a>
+
+        <a href="mailto:ninaerens4@gmail.com?subject=Free%20Consultation"
+           class="btn btn-dark">Book a Free Call</a>
+
+        <div class="contact-box">
+            <strong>⌖ Location</strong>
+            <br>
+            Cape Town, South Africa
+        </div>
+
     </div>
 
-    <a href="mailto:ninaerens4@gmail.com" class="btn btn-dark">Email Me</a>
-
-    <div class="contact-box">
-      <strong>📍 Location</strong><br>
-      Cape Town, South Africa
-    </div>
-  </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  © 2026 Janine Erens • Virtual Assistant • All rights reserved.
+    © 2026 Janine Erens • Virtual Assistant • All rights reserved.
 </footer>
 
 </body>
