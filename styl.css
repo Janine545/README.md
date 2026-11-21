@@ -16,6 +16,7 @@ body {
     line-height: 1.5;
 }
 
+
 /* HEADER */
 header {
     background: #ffffff;
@@ -51,6 +52,7 @@ nav a {
     font-weight: bold;
 }
 
+
 /* BUTTONS */
 .btn {
     display: inline-block;
@@ -82,7 +84,8 @@ nav a {
     color: #ffffff;
 }
 
-/* HERO SECTION */
+
+/* HOMEPAGE */
 .hero {
     background: #dce8f1;
     padding: 35px 9%;
@@ -129,6 +132,8 @@ nav a {
     margin-top: 12px;
 }
 
+
+/* HOMEPAGE ILLUSTRATION */
 .hero-img {
     width: 330px;
     flex-shrink: 0;
@@ -140,7 +145,8 @@ nav a {
     display: block;
 }
 
-/* HERO TAGS */
+
+/* TAGS */
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -157,14 +163,26 @@ nav a {
     font-weight: bold;
 }
 
+
 /* MAIN CONTENT */
 .main-content {
-    padding: 15px 9%;
+    padding: 20px 9%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
     align-items: stretch;
 }
+
+
+/* LEFT COLUMN */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    min-width: 0;
+}
+
 
 /* ABOUT SECTION */
 .about {
@@ -180,7 +198,7 @@ nav a {
     object-fit: cover;
     border-radius: 13px;
     flex-shrink: 0;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
 }
 
 .about-text h2 {
@@ -192,13 +210,14 @@ nav a {
 .about-text p {
     color: #222222;
     font-size: 14px;
-    margin-bottom: 18px;
+    margin-bottom: 12px;
 }
 
 .about-text h3 {
     font-size: 20px;
     margin-bottom: 10px;
 }
+
 
 /* SKILLS */
 .skills {
@@ -215,31 +234,36 @@ nav a {
     font-size: 11px;
 }
 
+
 /* SERVICES */
 .services {
     background: #dce8f1;
     border-radius: 12px;
-    padding: 18px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .services h2 {
     text-align: center;
     color: #10285e;
     font-size: 26px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    flex: 1;
 }
 
 .card {
     background: #ffffff;
-    padding: 15px;
+    padding: 18px;
     border-radius: 11px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
 }
 
 .service-icon {
@@ -252,45 +276,47 @@ nav a {
     color: #ffffff;
     border-radius: 50%;
     font-size: 21px;
-    margin-right: 6px;
+    margin-bottom: 10px;
 }
 
 .card h4 {
-    display: inline;
+    display: block;
     font-size: 15px;
     color: #10285e;
+    margin-bottom: 8px;
 }
 
 .card p {
     font-size: 13px;
     color: #222222;
-    margin-top: 7px;
-    line-height: 1.4;
+    line-height: 1.5;
 }
+
 
 /* EXPERIENCE */
 .experience {
     background: #cbdced;
-    padding: 15px 9%;
+    padding: 18px;
+    border-radius: 8px;
 }
 
 .experience h2 {
     color: #10285e;
     font-size: 25px;
-    margin-bottom: 3px;
+    margin-bottom: 7px;
 }
 
 .experience p {
-    max-width: 850px;
     color: #222222;
     font-size: 14px;
 }
+
 
 /* CONTACT */
 .contact {
     background: #ffffff;
     text-align: center;
-    padding: 18px 9%;
+    padding: 35px 9%;
 }
 
 .contact h2 {
@@ -300,7 +326,7 @@ nav a {
 }
 
 .contact p {
-    margin-bottom: 12px;
+    margin-bottom: 18px;
     color: #222222;
 }
 
@@ -316,22 +342,24 @@ nav a {
     background: #dce8f1;
     color: #10285e;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 12px 20px;
     min-width: 220px;
     border-radius: 7px;
     font-size: 14px;
 }
+
 
 /* FOOTER */
 footer {
     background: #102e70;
     color: #ffffff;
     text-align: center;
-    padding: 13px;
+    padding: 15px;
     font-size: 13px;
 }
 
-/* TABLET AND MOBILE */
+
+/* TABLET RESPONSIVENESS */
 @media (max-width: 900px) {
 
     header {
@@ -363,8 +391,14 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .services {
+        height: auto;
+    }
+
 }
 
+
+/* MOBILE RESPONSIVENESS */
 @media (max-width: 600px) {
 
     .hero h2 {
@@ -374,6 +408,11 @@ footer {
     .about {
         flex-direction: column;
         text-align: center;
+    }
+
+    .profile-photo {
+        width: 180px;
+        height: 215px;
     }
 
     .skills {
