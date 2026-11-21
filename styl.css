@@ -293,11 +293,13 @@ nav a {
 }
 
 
-/* EXPERIENCE */
+/* EXPERIENCE FULL-WIDTH BACKGROUND */
 .experience {
     background: #cbdced;
-    padding: 18px;
-    border-radius: 8px;
+    padding: 25px 9%;
+    border-radius:0;
+    width:100%;
+    margin-top:-20px;
 }
 
 .experience h2 {
@@ -309,6 +311,7 @@ nav a {
 .experience p {
     color: #222222;
     font-size: 14px;
+    max-width:900px;
 }
 
 
